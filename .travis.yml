@@ -1,1 +1,10 @@
 language: java
+jdk:
+  - oraclejdk8
+env:
+  matrix:
+    - PROFILE=apache
+    - PROFILE=cdh512
+    - PROFILE=cdh513
+
+script: "mvn clean install -P ${PROFILE}"

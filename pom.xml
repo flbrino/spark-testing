@@ -17,12 +17,12 @@
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-core_2.11</artifactId>
-      <version>2.1.1</version>
+      <version>${spark.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-sql_2.11</artifactId>
-      <version>2.1.1</version>
+      <version>${spark.version}</version>
     </dependency>
 
     <!-- Test Dependencies -->
@@ -32,7 +32,60 @@
       <version>6.13.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.google.inject</groupId>
+      <artifactId>guice</artifactId>
+      <version>4.0</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
+
+  <profiles>
+
+    <!-- Apache Spark -->
+    <profile>
+      <id>apache</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <spark.version>2.2.1</spark.version>
+      </properties>
+    </profile>
+
+    <!-- Cloudera Spark -->
+    <profile>
+      <id>cdh512</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <spark.version>2.1.0.cloudera1</spark.version>
+      </properties>
+      <repositories>
+        <repository>
+          <id>cloudera</id>
+          <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </repository>
+      </repositories>
+    </profile>
+    <profile>
+      <id>cdh513</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <spark.version>2.2.0.cloudera1</spark.version>
+      </properties>
+      <repositories>
+        <repository>
+          <id>cloudera</id>
+          <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </repository>
+      </repositories>
+    </profile>
+
+  </profiles>
 
 </project>
