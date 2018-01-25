@@ -1,4 +1,5 @@
 # Spark Testing
+[![Build Status](https://travis-ci.org/ccaspanello/spark-testing.svg?branch=master)](https://travis-ci.org/ccaspanello/spark-testing)
 
 Project to learn how to effectively develop and test Spark applications.
 
