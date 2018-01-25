@@ -13,7 +13,6 @@ public class GuiceExampleModule implements Module {
   @Override
   public void configure( Binder binder ) {
     SparkConf sparkConf = new SparkConf();
-    sparkConf.set( "spark.eventLog.enabled", "true" );
     sparkConf.set( "spark.driver.host", "localhost" );
     SparkContext sparkContext = new SparkContext( "local[*]", "SparkTest", sparkConf );
 
