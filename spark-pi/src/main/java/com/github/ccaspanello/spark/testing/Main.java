@@ -33,7 +33,7 @@ public class Main {
     SparkContext sparkContext = SparkContext.getOrCreate();
     SparkPi sparkPi = new SparkPi( sparkContext );
     double result = sparkPi.run( 100 );
-    LOG.info( "Result: {}" );
+    LOG.info( "Result: {}", result );
   }
 
 }

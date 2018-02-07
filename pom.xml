@@ -16,6 +16,7 @@
 
   <modules>
     <module>spark-pi</module>
+    <module>spark-etl</module>
   </modules>
 
   <dependencyManagement>
