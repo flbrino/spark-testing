@@ -28,6 +28,6 @@ public class SparkPiTest {
   public void testRun10() {
     SparkPi sparkPi = new SparkPi(sc);
     double result = sparkPi.run( 10);
-    assertEquals(3.14, result, 0.01);
+    assertEquals(3.14, result, 0.05);
   }
 }
