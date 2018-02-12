@@ -7,5 +7,6 @@ env:
     - PROFILE=apache
     - PROFILE=cdh512
     - PROFILE=cdh513
+    - PROFILE=cdh513_RLS2
 
 script: "mvn clean install -P ${PROFILE}"

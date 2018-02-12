@@ -91,6 +91,21 @@
         </repository>
       </repositories>
     </profile>
+    <profile>
+      <id>cdh513_RLS2</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <spark.version>2.2.0.cloudera2</spark.version>
+      </properties>
+      <repositories>
+        <repository>
+          <id>cloudera</id>
+          <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </repository>
+      </repositories>
+    </profile>
 
   </profiles>
 
