@@ -59,6 +59,12 @@
               <goal>enforce</goal>
             </goals>
           </execution>
+          <execution>
+            <id>enforce-banned-dependencies</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+          </execution>
         </executions>
       </plugin>
     </plugins>
